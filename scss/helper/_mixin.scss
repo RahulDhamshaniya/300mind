@@ -1,0 +1,68 @@
+@mixin before-after {
+     position: absolute;
+     content: "";
+}
+
+@mixin default-font {
+     font-size: 2rem;
+     line-height: 3rem;
+}
+
+@mixin full-img {
+     height: 100%;
+     object-fit: cover;
+     width: 100%;
+}
+
+@mixin brick-bg {
+     @include before-after;
+     background-image: url(#{$asset-path}/brick-bg1.svg);
+     background-repeat: no-repeat;
+     background-position: center center;
+     background-size: cover;
+     height: 100%;
+     top: 0;
+     left: 0;
+     width: 100%;
+     z-index: -1;
+}
+
+@mixin line{
+     position: absolute;
+     inset: 0;
+     margin: auto;
+}
+
+@mixin small-star{
+     @include before-after;
+     background: url(#{$asset-path}/star.svg) 0 0 no-repeat;
+     display: block;
+     height: 40px;
+     inset: 0;
+     margin: auto;
+     left: -20px;
+     width: 40px;
+}
+
+@mixin line-v{
+     background: linear-gradient(to top, transparent 50%, rgba(241, 136, 77, 0.2) 50%);
+     background-size: 25px 25px, 100% 2px;
+     height: 100%;
+     width: 2px;
+}
+
+@mixin line-h{
+     background: linear-gradient(to right, transparent 50%, rgba($color: $secondary-color, $alpha: .2) 50%);
+     background-size: 25px 2px, 100% 2px;
+     height: 2px;
+}
+
+@mixin gredients-bg{
+     background: url(#{$asset-path}/bg.svg) 0 0 no-repeat;
+     background-size: cover;
+}
+
+@mixin background-size{
+     width: 100%;
+     z-index: 5;
+}

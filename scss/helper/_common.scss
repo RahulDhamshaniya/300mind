@@ -1,0 +1,66 @@
+body,
+html{
+    font-family: $ff-secondary;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    @include default-font;
+    background-color: $monochome1;
+    color: $secondary-color; 
+
+}
+
+p,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+.title{
+    .h{
+        font-family: $ff-primary;
+        font-size: 8rem;
+        font-weight: 600;
+        line-height: 8.4rem;
+    }
+}
+
+.d{
+    &-flex{
+        display: flex;
+    }
+}
+
+.full-link{
+    left: 0;
+    position: absolute;
+    height: 100%;
+    top: 0col;
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+@media (min-width: 1600px) {
+    .container{
+        width: 1560px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .text-lg-end{
+        text-align: right;
+    }
+    .order-lg{
+        &-2{
+            order: 2;
+        }
+        &-1{
+            order: 1;
+        }
+    }
+}

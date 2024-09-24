@@ -1,0 +1,27 @@
+$html-font:10px;
+html{
+     font-size: $html-font;
+ }
+
+
+$ff-primary:"Changa", system-ui;;
+$ff-secondary:"Poppins", sans-serif;;
+
+
+$primary-color:#401B00; 
+$secondary-color:#F1884D;
+$secondary-color1:#321601;
+$secondary-color2:#F6F5ED;
+
+$monochome:#000;
+$monochome1:#fff;
+$monochome2:#3B3B3B;
+
+$asset-path: "../images";
+// background: url(#{$asset-path}/gfg.gif);
+
+@media (max-width: 1550px) {
+     html{
+          font-size: calc($html-font - (($html-font * 30 ) / 100));
+     }
+ }

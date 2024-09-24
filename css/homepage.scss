@@ -1,0 +1,723 @@
+@import '../scss/helper/variable';
+@import '../scss/helper/mixin';
+
+
+.section {
+
+     &-hero-banner{
+          @include gredients-bg;
+          padding: 0;
+
+          .col-one{
+               padding-top: 42rem;
+          }
+
+          .statistics{
+               align-items: flex-end;
+               background-color: $secondary-color;
+               display: flex;
+               height: 44rem;
+               position: relative;
+               width: 100%;
+               .img{
+                    position: absolute;
+                    max-width: 100%;
+                    z-index: 6;
+               }
+
+               &-number{
+                    position: relative;
+                    padding: 0 2.5rem 3rem;
+                    z-index: 7;
+
+                    .col{
+                         color: $primary-color;
+                         padding: 0;
+
+                         .h{
+                              font-family: $ff-primary;
+                              font-size: 4rem;
+                              font-weight: 600;
+                              line-height: 4rem;
+                         }
+
+                         p{
+                              font-size: 1.6rem;
+                              line-height: 2rem;
+                         }
+                    }
+               }
+
+               &::before,
+               &::after{
+                    @include before-after;
+               }
+
+               &::before{
+                    background: url(#{$asset-path}/white-rectangle.svg) 0 0 no-repeat;
+                    background-size: cover;
+                    height: 100%;
+                    @include background-size;
+               }
+
+               &::after{
+                    background: url(#{$asset-path}/character-02.png) 0 0 no-repeat;
+                    height: 820px;
+                    left: -180px;
+                    top: -425px;
+                    width: 728px;
+                    z-index: 4;
+               }
+          }
+
+          .main-title{
+               .h{
+                    color: $primary-color;
+                    font-family: $ff-primary;
+                    font-size: 24rem;
+                    line-height: 1.2;
+
+                    p{
+                         color: $secondary-color;
+                         font-family: $ff-secondary;
+                         font-size: 8rem;
+                         text-transform: uppercase;
+                         line-height: 1
+                    }
+               }
+          }
+
+          .last{
+               background-color: $secondary-color;
+               height: 34.1rem;
+               position: relative;
+               width: 100%;
+
+               &::after,
+               &::before{
+                    @include before-after;
+               }
+
+               &::after{
+                    background: url(#{$asset-path}/character-03.png) 0 0 no-repeat;
+                    background-size: 100%;
+                    height: 100%;
+                    transform: scale(1.5);
+                    left: -2rem;
+                    top: -2rem;
+                    width: 100%;
+               }
+
+               &::before{
+                    background: url(#{$asset-path}/white-rectangle1.svg) 0 0 no-repeat;
+                    background-size: cover;
+                    bottom: -10rem;
+                    height: 17.9rem;
+                    top: auto;
+                    @include background-size;
+               }
+
+               .img{
+                    bottom: -9.2rem;
+                    max-width: 96%;
+                    margin: auto;
+                    position: absolute;
+                    left: 1.3rem;
+                    right: 0;
+                    z-index: 6;
+               }
+          }
+          
+          .bookcall{
+               margin-top: 4rem;
+               .text{
+                    position: relative;
+                    z-index: 5;
+
+                    p{
+                         color: $primary-color;
+                         font-size: 1.6rem;
+                         line-height: 2.4rem;
+                    }
+               }
+
+               .btn{
+                    background-color: $primary-color;
+                    clip-path: polygon(85% 0%, 100% 30%, 100% 100%, 13% 100%, 0% 74%, 0 0);
+                    color: $monochome1;
+                    display: inline-block;
+                    padding: 1.8rem 2.5rem ;
+                    text-decoration: none;
+                    text-transform: uppercase;
+
+                    img{
+                         margin-left: .5rem;
+                         transition: ease-in .2s;
+                    }
+
+                    &:hover{
+                         img{
+                              transform: rotate(45deg);
+                         }
+                    }
+
+                    &-group{
+                         margin-top: 4rem;
+                    }
+               }
+          }
+     }
+
+     &-service {
+          @include gredients-bg;
+
+          .title {
+               margin-bottom: 1rem;
+
+               .h {
+                    color: $primary-color;
+               }
+          }
+
+          .character-img {
+               position: absolute;
+               top: -185px;
+               right: -95px;
+          }
+
+          .brick-box {
+               position: relative;
+               height: 49.2rem;
+               margin-top: 17rem;
+               width: 56rem;
+          }
+
+          .inner-box {
+               clip-path: polygon(53% 0, 100% 30%, 100% 100%, 0 100%, 0 0);
+               background-color: $primary-color;
+               color: $monochome1;
+               position: absolute;
+               padding: 5.6rem 4rem;
+               height: 100%;
+               top: 0;
+               width: 100%;
+
+               &::after {
+                    @include before-after;
+                    background: url(#{$asset-path}/brick-bg.svg) 0 0 no-repeat;
+                    height: 100%;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    z-index: -1;
+               }
+
+               .h {
+                    font-family: $ff-primary;
+                    font-size: 4rem;
+                    font-weight: 600;
+                    line-height: 1;
+                    max-width: 80%;
+                    margin-bottom: 2rem;
+                    text-transform: uppercase;
+               }
+
+               ul {
+                    font-family: $ff-secondary;
+
+                    li {
+                         font-size: 2.2rem;
+                         line-height: 4rem;
+                         font-weight: 400;
+
+                         &+li {
+                              margin-top: .2rem;
+                         }
+                    }
+               }
+
+          }
+
+          .right {
+               display: flex;
+               flex-wrap: wrap;
+               justify-content: end;
+               padding-left: 4rem;
+
+               .box {
+                    max-width: 100%;
+                    width: 75rem;
+               }
+
+               p {
+                    color: $primary-color;
+               }
+
+               ul {
+                    margin: 6rem 0 0;
+                    padding: 0;
+                    width: 100%;
+
+                    li {
+                         background-color: $secondary-color;
+                         color: $primary-color;
+                         font-family: $ff-primary;
+                         font-size: 4rem;
+                         font-weight: 600;
+                         line-height: 4.2rem;
+                         list-style: none;
+                         padding: 3.2rem 4rem;
+                         position: relative;
+                         overflow: hidden;
+                         z-index: 1;
+
+                         &::after {
+                              @include brick-bg;
+                         }
+
+                         &+li {
+                              margin-top: 2rem;
+                         }
+                    }
+               }
+          }
+     }
+
+     &-hire {
+          background-color: $primary-color;
+          padding: 12rem 0 10rem;
+          position: relative;
+
+          .title {
+               .h {
+                    color: $monochome1;
+
+                    span {
+                         color: $secondary-color;
+                    }
+               }
+          }
+
+          .tab {
+               display: none;
+
+               &-container {
+                    margin-top: 6rem;
+                    position: relative;
+               }
+
+               &-menu {
+                    position: absolute;
+
+                    ul {
+                         margin: 0;
+                         padding: 0;
+
+                         li {
+                              display: inline-block;
+                              list-style-type: none;
+
+                              &+li {
+                                   margin-left: 4rem;
+                              }
+                         }
+                    }
+
+                    .link {
+                         color: $monochome1;
+                         display: inline-block;
+                         font-family: $ff-primary;
+                         font-size: 4rem;
+                         font-weight: 600;
+                         line-height: 4.4rem;
+                         padding: 3.2rem;
+                         text-decoration: none;
+
+                         &-active,
+                         &:hover {
+                              background-color: $secondary-color;
+                              color: $primary-color;
+                              clip-path: polygon(80% 0, 100% 30%, 100% 100%, 0 100%, 0 0);
+                         }
+                    }
+               }
+
+               &-content {
+                    align-items: flex-end;
+                    display: flex;
+
+                    &-img {
+                         .img-box {
+                              clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+                              height: 43rem;
+                              overflow: hidden;
+                              width: 48.8rem;
+
+                              img {
+                                   @include full-img
+                              }
+                         }
+                    }
+
+                    &-text {
+                         color: $primary-color;
+                         flex: 1;
+                         padding-right: 6rem;
+
+                         .h {
+                              font-family: $ff-primary;
+                              font-size: 4rem;
+                              line-height: 5rem;
+                              margin-bottom: 3rem;
+                              text-transform: uppercase;
+                         }
+
+                         ul {
+                              li {
+                                   font-size: 2.2rem;
+                                   font-weight: 400;
+                              }
+                         }
+
+
+                         .inner-box {
+                              background-color: $monochome1;
+                              clip-path: polygon(90% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+                              padding: 6rem 4rem;
+                              position: relative;
+                              z-index: 2;
+
+                              &::after {
+                                   @include brick-bg;
+                                   background-repeat: repeat;
+                                   background-size: 100%;
+                              }
+                         }
+                    }
+               }
+
+               &-active {
+                    display: block;
+               }
+          }
+
+          .line {
+               
+               @include line;
+
+               &-v {
+                    @include line-v;
+
+                    &::after {
+                         @include small-star;
+                    }
+
+                    &.one {
+                         left: 9%;
+                         right: auto;
+                    }
+
+                    &.two {
+                         left: 36%;
+                         right: auto;
+                    }
+
+                    &.three {
+                         left: 63%;
+                         right: auto
+                    }
+
+                    &.four {
+                         left: auto;
+                         right: 9%;
+                    }
+               }
+
+               &-h {
+                    @include line-h;
+               }
+          }
+
+          &::after {
+               @include before-after;
+               background: url(#{$asset-path}/character-01.png) 0 0 no-repeat;
+               height: 310px;
+               left: auto;
+               right: 0;
+               top: 20px;
+               width: 295px;
+          }
+     }
+
+     &-portfolio {
+          @include gredients-bg;
+          padding: 10rem 0;
+
+          .box {
+               background-color: $primary-color;
+               border-radius: 20px;
+               border: 1px solid rgba($color: $monochome, $alpha: .09);
+               padding: 5rem 17rem 9rem;
+          }
+
+          .portfolio {
+               &-container {
+                    gap: 3rem;
+               }
+
+               &-col {
+                    position: relative;
+
+                    .portfolio-item {
+                         position: relative;
+
+                         &+.portfolio-item {
+                              margin-top: 3rem;
+                         }
+                    }
+
+                    &.left {
+                         top: 4rem;
+
+                         .portfolio-item {
+                              left: -3rem;
+
+                              &+.portfolio-item {
+                                   left: 3rem;
+                              }
+                         }
+                    }
+
+                    &.right {
+                         top: 0;
+
+                         .portfolio-item {
+                              left: -3rem;
+
+                              &+.portfolio-item {
+                                   left: 3rem;
+                              }
+                         }
+                    }
+               }
+
+               &-item {
+                    cursor: pointer;
+                    border: 2px solid transparent;
+                    border-radius: 14px;
+                    height: 280px;
+                    overflow: hidden;
+                    transition: transform 0.3s ease, border-color 0.3s ease;
+                    text-align: center;
+                    opacity: .4;
+                    width: 540px;
+
+                    img {
+                         @include full-img;
+                    }
+
+                    &-center {
+                         border: 7px solid $monochome1;
+                         position: absolute;
+                         opacity: 1;
+                         z-index: 55;
+                    }
+               }
+
+          }
+
+          .play-button {
+               position: absolute;
+               margin: auto;
+               height: 7.2rem;
+               text-decoration: none;
+               width: 7.2rem;
+               z-index: 56;
+          }
+
+          .video-popup {
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               position: absolute;
+               padding: 2rem;
+               z-index: 55;
+
+               video{
+                    max-width: 100%;
+                    width: 580px;
+               }
+          }
+
+          .close{
+               background-color: $secondary-color;
+               border-radius: 100%;
+               box-shadow: none;
+               border: none;
+               cursor: pointer;
+               color: $monochome1;
+               position: absolute;
+               height: 3rem;
+               width: 3rem;
+          }
+     }
+
+     &-collection {
+          padding: 8rem 0 10rem;
+
+          .container {
+               &-title {
+                    position: absolute;
+                    left: 3.4rem;
+                    top: 15rem;
+                    right: 0;
+                    z-index: 15;
+
+                    .title {
+                         small {
+                              font-size: 1.6rem;
+                              letter-spacing: .5rem;
+                              text-transform: uppercase;
+                              position: relative;
+                              left: .4rem;
+                         }
+
+                         .h {
+                              color: $primary-color;
+                              font-size: 5.6rem;
+                              line-height: 9.7rem;
+                         }
+                    }
+
+                    .btn-box {
+                         display: flex;
+                         justify-content: flex-end;
+                         margin: 0;
+
+                         .prev-slide {
+                              transform: rotate(180deg);
+                         }
+
+                         .icon {
+                              align-items: center;
+                              background-color: $secondary-color2;
+                              border: 1px solid rgba($color: $monochome, $alpha: .05);
+                              display: flex;
+                              justify-content: center;
+                              height: 7rem;
+                              width: 7rem;
+
+                              &+.icon {
+                                   margin-left: 2rem;
+                              }
+
+                              &.disabled {
+                                   cursor: not-allowed;
+
+                                   img {
+                                        opacity: .2;
+                                   }
+                              }
+                         }
+                    }
+               }
+
+               &-slider {
+                    margin-right: -2.4rem;
+                    margin-left: auto;
+                    padding-right: 0;
+                    width: calc((100vw + 1550px) / 2);
+               }
+          }
+
+          .box {
+               cursor: pointer;
+               position: relative;
+
+               &-img {
+                    height: 45.7rem;
+                    position: relative;
+                    overflow: hidden;
+                    width: 100%;
+
+                    img {
+                         @include full-img
+                    }
+
+                    .price {
+                         align-items: center;
+                         background-color: $secondary-color;
+                         bottom: 3rem;
+                         font-family: $ff-secondary;
+                         max-width: 38rem;
+                         margin: auto;
+                         left: 0;
+                         padding: 2.4rem 3rem;
+                         position: absolute;
+                         right: 0;
+                         transform: translateY(150px);
+                         transition: ease-in-out all .6s;
+                         width: 100%;
+
+                         .h {
+                              color: $monochome1;
+                              font-size: 1.6rem;
+                              font-weight: 500;
+                              letter-spacing: 1.5px;
+                              line-height: 1;
+                              text-transform: uppercase;
+                         }
+
+                         p {
+                              color: $monochome;
+                              font-weight: 600;
+                         }
+                    }
+               }
+
+               &-text {
+                    padding: 2rem 3rem 0;
+
+                    .h {
+                         @include default-font;
+                         font-family: $ff-secondary;
+                         font-weight: 700;
+                         margin-bottom: 1rem;
+                    }
+
+                    p {
+                         color: $monochome2;
+                         font-size: 1.4rem;
+                         line-height: 2.1rem;
+                    }
+               }
+
+               &:hover {
+                    .box-img {
+                         .price {
+                              transform: translateY(0);
+                         }
+                    }
+               }
+          }
+
+          .slick {
+               &-slide {
+                    margin-right: 2.4rem;
+
+                    &.current {
+                         position: relative;
+
+                         .box-img {
+                              height: 68.4rem;
+                         }
+                    }
+               }
+
+               &-track {
+                    align-items: flex-end;
+                    display: flex;
+               }
+          }
+     }
+}

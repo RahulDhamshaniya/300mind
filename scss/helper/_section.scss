@@ -1,0 +1,47 @@
+.section{
+     position: relative;
+     padding: 12rem 0;
+     z-index: 1;
+
+     @media (max-width:991px) {
+          padding: 8rem 0;
+     }
+
+
+     .container{
+          position: relative;;
+          z-index: 10;
+     }
+
+     &1{
+          padding: 6rem 0 12rem;
+
+          @media (max-width:991px) {
+               padding: 4rem 0 8rem;
+          }
+     }
+
+     &2{
+          padding: 12rem 0 6rem;
+
+          @media (max-width:991px) {
+               padding: 8rem 0 4rem;
+          }
+     }
+
+     &3{
+          padding: 6rem 0;
+
+          @media (max-width:991px) {
+               padding: 4rem 0;
+          }
+     }
+     
+     &4{
+          padding: 6rem 0 0;
+
+          @media (max-width:991px) {
+               padding: 4rem 0 0;
+          }
+     }
+}
