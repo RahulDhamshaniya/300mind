@@ -32,6 +32,10 @@
                          font-weight: 500;
                          line-height: 4.4rem;
                          text-decoration: none;
+
+                         &:hover{
+                              color: $secondary-color;
+                         }
                     }
                }
           }
@@ -104,7 +108,7 @@
                          font-weight: 600;
                          position: absolute;
                          right: 2rem;
-                         top: 1.8rem;
+                         top: 2.1rem;
                          
 
                          &:hover{
@@ -221,12 +225,73 @@
                               }
                          }
                     }
-
+                    
                     span{
-
+                         
                          & + img{
                               transition: ease-in .2s;
                          }
+                    }
+               }
+          }
+     }
+}
+
+@media (max-width:1199px){
+     .footer{
+          &-main {
+               .content-info{
+                    padding: 0;
+               }
+          }
+     }
+}
+@media (max-width:991px) {
+     @media (max-width:1199px){
+     
+     }
+     .footer{
+          &-main {
+               padding:3rem 0;
+               .about{
+                    .h{
+                         font-size: 5.8rem;
+                         line-height: 1.1;
+                    }
+               }
+               .content{
+                    &-info{
+                         margin: 3rem 0 0;
+                         padding: 0;
+                    }
+
+                    .social-media{
+                         justify-content: start;
+                         margin-top: 3rem;
+                    }
+
+               }
+               .content{
+                    margin: 3rem 0 0;
+               }
+          }
+
+          &-bottom{
+               .row{
+                    .col-md-12{
+                         & + .col-md-12{
+                              margin-top: 2rem;
+                         }
+                    }
+               }
+          }
+
+          &-top {
+               ul {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    li{
+                         padding: 2rem 3rem;
                     }
                }
           }

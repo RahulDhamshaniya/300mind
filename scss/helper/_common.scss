@@ -6,11 +6,28 @@ html{
     width: 100%;
     overflow-x: hidden;
 }
+html{
+    height: 100%;
+    &.is-active{
+        overflow: hidden;
+    }
+    
+}
 
 body{
     @include default-font;
     background-color: $monochome1;
     color: $secondary-color; 
+    &.is-active{
+        position: relative;
+        &::before{
+            @include before-after;
+            background-color: rgba($color: $monochome, $alpha: .9);
+            height: 100%;
+            width: 100%;
+            z-index: 5;
+        }
+    }
 
 }
 
@@ -45,15 +62,18 @@ p,h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
 
-@media (min-width: 1600px) {
-    .container{
-        width: 1560px;
-    }
-}
 
-@media (min-width: 1600px) {
+@media (min-width: 992px) {
     .text-lg-end{
         text-align: right;
+    }
+
+    .text-lg-start{
+        text-align: left;
+    }
+
+    .text-lg-right{
+        text-align: right
     }
     .order-lg{
         &-2{
@@ -61,6 +81,27 @@ p,h1,h2,h3,h4,h5,h6{
         }
         &-1{
             order: 1;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .container{
+        width: 1380px;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container{
+        width: 1560px;
+    }
+}
+
+@media (max-width:991px){
+    .title {
+        .h{
+            font-size: 6rem;
+            line-height: 1.1;
         }
     }
 }

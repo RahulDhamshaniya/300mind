@@ -33,9 +33,18 @@
      margin: auto;
 }
 
+@mixin small-star-bg($bgcolor){
+     @if $bgcolor == 'brown'{
+          background: url(#{$asset-path}/star.svg) 0 0 no-repeat;
+     }
+     @else if $bgcolor == 'orange'{
+          background: url(#{$asset-path}/star-orange.svg) 0 0 no-repeat;
+     }
+}
+
+
 @mixin small-star{
      @include before-after;
-     background: url(#{$asset-path}/star.svg) 0 0 no-repeat;
      display: block;
      height: 40px;
      inset: 0;
@@ -44,15 +53,33 @@
      width: 40px;
 }
 
+@mixin bg-line-v($bgcolor){
+     @if $bgcolor == 'brown'{
+          background: linear-gradient(to top, transparent 50%, rgba(241, 136, 77, 0.2) 50%);
+     }
+     @else if $bgcolor == 'orange'{
+          background: linear-gradient(to top, transparent 50%, $secondary-color 50%);
+     }
+}
+
+@mixin bg-line-h($bgcolor){
+     @if $bgcolor == 'brown'{
+          background: linear-gradient(to right, transparent 50%, rgba($color: $secondary-color, $alpha: .2) 50%);
+     }
+     @else if $bgcolor == 'orange'{
+          background: linear-gradient(to right, transparent 50%, $secondary-color 50%);
+     }
+}
+
+
 @mixin line-v{
-     background: linear-gradient(to top, transparent 50%, rgba(241, 136, 77, 0.2) 50%);
      background-size: 25px 25px, 100% 2px;
      height: 100%;
      width: 2px;
 }
 
 @mixin line-h{
-     background: linear-gradient(to right, transparent 50%, rgba($color: $secondary-color, $alpha: .2) 50%);
+     
      background-size: 25px 2px, 100% 2px;
      height: 2px;
 }
