@@ -219,6 +219,7 @@
                     }
 
                     &:hover{
+                         color: $secondary-color;
                          span{
                               & + img{
                                    transform: rotate(45deg) scale(.8);

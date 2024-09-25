@@ -666,6 +666,9 @@ p, h1, h2, h3, h4, h5, h6 {
 .footer-bottom .quick-links a + a {
   margin-left: 3.6rem;
 }
+.footer-bottom .quick-links a:hover {
+  color: #F1884D;
+}
 .footer-bottom .quick-links a:hover span + img {
   transform: rotate(45deg) scale(0.8);
 }
